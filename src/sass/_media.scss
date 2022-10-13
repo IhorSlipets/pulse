@@ -1,0 +1,99 @@
+@media (max-width:1200px) {
+
+}
+@media (max-width:991px) {
+
+}
+@media (max-width:767px) {
+
+}
+@media (max-width:575px) {
+    .header {
+        &__logo {
+            width: 280px;
+            img {
+                width: 100%; 
+            }
+        }
+        &__phone {
+            font-size: 14px;
+        }
+        &__official {
+            span {
+                font-size: 14px;
+            }
+        }
+            
+    }
+    .button {
+        height: 24px;
+        width: 130px;
+        font-size: 12px;
+        &_main {
+            width: 220px;
+        }
+    }
+    .promo {
+        &__header {
+            font-size: 36px;
+        }
+        &__subheader {
+            font-size: 16px;
+        }
+        &__icon {
+            width: 80%;
+        }
+        &__link {
+            font-size: 12px;
+        }
+    }    
+    .advance {
+        &__header {
+            font-size: 24px;
+        }
+        &__title {
+            font-size: 14px;
+        }
+        &__dscr {
+            font-size: 12px;
+        }
+    }
+}
+@media (max-width:440px) {
+    .header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &__official {
+            margin-top: 12px;
+        }
+        &__contacts {
+            margin-top: 12px;
+        }
+        &__phone {
+            text-align: center;
+            font-size: 18px;
+        }
+    }
+    .button {
+        width: 153px;
+        height: 32px;
+        font-size: 12px;
+        &_main {
+            width: 303px;
+            height: 54px;
+            font-size: 16px;
+        }
+    }
+    .promo {
+        &__header {
+            font-size: 24px;
+        }
+        &__subheader {
+            font-size: 14px;
+        }
+        &__link {
+            font-size: 16px;
+        }
+    }
+}
