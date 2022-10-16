@@ -1,0 +1,44 @@
+.feedback {
+    min-height: 940px;
+    &__list {
+        list-style-type: none;
+        margin-bottom: 0;
+        padding-left: 0;
+    }
+    &__item {
+        display: flex;
+        align-items: top;
+        margin-top: 60px;
+        img {
+            margin-left: 99px;
+            margin-right: 59px;
+            width: 169px;
+            height: 169px;
+        }
+    }
+    &__msg {
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+    }
+    &__athor {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 18px;
+        color: #0D0D0D;
+    }
+    &__period {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 22px;
+        color: #646464;
+    }
+    &__dscr {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 24px;
+        color: #0D0D0D;
+        margin-top: 10px;
+        max-width: 680px;
+    }
+}
