@@ -51,6 +51,16 @@
             height: 42px;
         }
     }
+    .footer {
+        &__info {
+            width: 300px;
+            height: 200px;
+        }
+        &__addr, &__phone {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+    }
 }
 @media (max-width:575px) {
     .header {
@@ -78,7 +88,7 @@
             width: 220px;
         }
         &_submit {
-            width: 100%;
+            width: 265px;
             height: 58px;
             font-size: 16px;
         }
@@ -151,6 +161,19 @@
             width: 90%;
         }
     }
+    .modal {
+        width: 322px;
+        min-height: 340px;
+        &__subtitle {
+            font-size: 16px;
+        }
+        &__dscr {
+            font-size: 12px;
+        }
+    }
+    .feed-form_mt25 input {
+        width: 265px;
+    }
 }
 @media (max-width:440px) {
     .header {
@@ -178,9 +201,9 @@
             font-size: 16px;
         }
         &_submit {
-            width: 100%;
+            width: 230px;
             height: 58px;
-            font-size: 16px;            
+            font-size: 14px;            
         }
     }
     .promo {
@@ -193,6 +216,11 @@
         }
         &__link {
             font-size: 16px;
+        }
+        &__icons {
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
         }
     }
     .advance {
@@ -221,5 +249,21 @@
     .carousel .slick-next {
         top: 115%;
         right: 70px;        
+    }
+    .modal {
+        width: 280px;
+        min-height: 340px;
+        &__subtitle {
+            font-size: 14px;
+        }
+        &__dscr {
+            font-size: 10px;
+        }
+        &__close {
+            right: 0px;
+        }
+    }
+    .feed-form_mt25 input {
+        width: 230px;
     }
 }

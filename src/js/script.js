@@ -69,4 +69,100 @@ $(document).ready(function(){
       toggleSlide('.catalog-item__link');
       toggleSlide('.catalog-item__back');
 
+      //modal
+
+      $('[data-modal=consultation]').on('click', function() {
+        $('.overlay, #consultation').fadeIn('slow');
+
+      });
+
+      $('.modal__close').on('click', function() {
+        $('.overlay, #consultation, #thanx, #order').fadeOut('slow');
+      });
+
+      // $('.button_mini').on('click', function() {
+      //   $('.overlay, #order').fadeIn('slow');
+      // });
+
+      // $('.button_submin').on('click', function() {
+      //   $('.overlay, #thanx').fadeIn('slow');
+      // });
+
+      $('.button_mini').each(function(i) {
+        $(this).on('click', function() {
+          $('#order .modal__dscr').text($('.catalog-item__subtitle').eq(i).text());
+          $('.overlay, #order').fadeIn('slow');          
+        });
+      });
+
+      // $('#consultation-form').validate();
+      // $('#consultation form').validate({
+      //   rules: {
+      //     name: "required",
+      //     phone: "required",
+      //     email: {
+      //       required : true,
+      //       email: true
+      //     }
+      //   },
+      //   messages: {
+      //     name: "Пожалуйста, введите свое имя",
+      //     phone: "Пожалуйста, введите свой номер телефона",
+      //     email: {
+      //       required: "Пожалуйста, введите свой email",
+      //       email: "Нерпвильный формат ввода почты"
+      //     }
+      //   }
+      // });
+      // $('#order form').validate();
+
+      function validateForm(form) {
+        $(form).validate({
+          rules: {
+            name: "required",
+            phone: "required",
+            email: {
+              required : true,
+              email: true
+            }
+          },
+          messages: {
+            name: "Пожалуйста, введите свое имя",
+            phone: "Пожалуйста, введите свой номер телефона",
+            email: {
+              required: "Пожалуйста, введите свой email",
+              email: "Неправильный формат ввода почты"
+            }
+          }
+        });
+      };
+
+      validateForm('#consultation-form');
+      validateForm('#consultation form');
+      validateForm('#order form');
+
+      $('input[name=phone]').mask("+38 (999) 999-9999");
+
+      $('form').submit(function(e) {
+          e.preventDefault();
+
+          if (!$(this).valid()) {
+            return;
+          }
+
+          $.ajax({
+            type: "POST",
+            url: "./mailer/smart.php",
+            data: $(this).serialize()
+          }).done(function() {
+            $(this).find("input").val("");
+            
+            $('#consultation, #order').fadeOut();
+            $('.overlay, #thanx').fadeIn('slow');
+
+            $('form').trigger('reset');
+          });
+          return false;
+      });
+
   });
