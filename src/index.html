@@ -5,13 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pulse</title>
-    <link rel="stylesheet" href="./css/bootstrap-reboot.min.css">
-    <link rel="stylesheet" href="./css/font.css">
-    <link rel="stylesheet" href="./css/slick.css">
     <link rel="stylesheet" href="./css/style.min.css">
 </head>
 <body>
-    <section class="promo">
+    <section id="up" class="promo">
         <div class="container">
             <header class="header">
                 <a href="#" class="header__logo">
@@ -70,7 +67,7 @@
                     
                 </div>
                 <div class="advance__item">
-                    <img src="./icons/heart.png" alt="health">
+                    <img src="./icons/heart.png" alt="health" class="advance__icon_animated">
                     <div class="advance__title">
                         Заботимся о здоровье
                     </div>
@@ -107,7 +104,7 @@
     </div>
 </section>
 
-<section class="carousel">
+<div class="carousel">
     <div class="container">
         <div class="carousel__inner">
             <div>
@@ -121,7 +118,7 @@
             </div>
           </div>
     </div>
-</section>
+</div>
 
 <section class="catalog">
     <div class="container">
@@ -406,7 +403,7 @@
         <h2 class="title title_feedback">отзывы клиентов</h2>
         <ul class="feedback__list">
             <li>
-                <div class="feedback__item">
+                <div class="feedback__item wow animate__animated animate__fadeInUp" data-wow-duration="2s" data-wow-delay="1s">
                     <img src="./img/photo_1.png" alt="user1">
                     <div class="feedback__msg">
                         <div class="feedback__athor">Ирина Иванченко</div>
@@ -418,7 +415,7 @@
                 </div>
             </li>
             <li >
-                <div class="feedback__item">
+                <div class="feedback__item wow animate__animated animate__fadeInUp" data-wow-duration="2s" data-wow-delay="1s">
                     <img src="./img/photo_2.png" alt="user2">
                     <div class="feedback__msg">
                         <div class="feedback__athor">Иван Сёмочкин</div>
@@ -430,7 +427,7 @@
                 </div>
             </li>
             <li>
-                <div class="feedback__item">
+                <div class="feedback__item wow animate__animated animate__fadeInUp" data-wow-duration="2s" data-wow-delay="1s">
                     <img src="./img/photo_3.png" alt="user3">
                     <div class="feedback__msg">
                         <div class="feedback__athor">Юлия Дашкина</div>
@@ -449,7 +446,7 @@
 
 <footer class="footer">
     <div class="footer__map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4488.6227373472475!2d37.64204279216735!3d55.770463867129884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a636edcd2ad%3A0x4c2ca101e2c8c617!2z0JzRj9GB0L3QuNGG0LrQuNC5INC_0YAt0LQsIDQvMywg0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8sIDEwNzA3OA!5e0!3m2!1sru!2snl!4v1665909090786!5m2!1sru!2snl" width="100%" height="630" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4488.6227373472475!2d37.64204279216735!3d55.770463867129884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a636edcd2ad%3A0x4c2ca101e2c8c617!2z0JzRj9GB0L3QuNGG0LrQuNC5INC_0YAt0LQsIDQvMywg0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8sIDEwNzA3OA!5e0!3m2!1sru!2snl!4v1665909090786!5m2!1sru!2snl" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <div class="footer__info">
         <address class="footer__addr">Москва, Мясницкий проезд, д.3с1</address>
@@ -497,12 +494,16 @@
     </div>
 </div>
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<a href="#up" class="pageup"><img src="./icons/up.svg" alt="pageup"></a>
+
+
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script type="text/javascript" src="./js/slick.min.js"></script>
+    <script src="./js/slick.min.js"></script>
     <script src="./js/jquery.validate.min.js"></script>
     <script src="./js/jquery.maskedinput.min.js"></script>
+    <script src="./js/wow.min.js"></script>
     <script src="./js/script.js"></script>
 </body>
 </html>

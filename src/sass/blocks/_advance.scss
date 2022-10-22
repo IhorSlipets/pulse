@@ -40,4 +40,14 @@
             color: #FF0000;
         }
     }
+    &__icon_animated {
+        animation: heartbeat 2s ease-in infinite;
+        // animation-name: heartbeat;
+        // animation-duration: 2s;
+        // animation-timing-function: ease;
+        // animation-iteration-count: infinite;
+        &:hover {
+            animation-play-state: paused;
+        }
+    }
 }
